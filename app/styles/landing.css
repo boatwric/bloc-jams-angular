@@ -3,8 +3,8 @@ body.landing { /*edits "landing" class*/
 }
 
 .hero-content {
-     position: relative; 
-     min-height: 600px; 
+     position: relative;
+     min-height: 600px;
      background-image: url(../assets/images/bloc_jams_bg.jpg);
      background-repeat: no-repeat;
      background-position: center center;
@@ -18,12 +18,12 @@ body.landing { /*edits "landing" class*/
 	-moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 100%;                  
-    text-align: center;            
-    font-size: 4rem;             
-    font-weight: 300;               
-    text-transform: uppercase;     
-    letter-spacing: 0.5rem;         
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
     text-shadow: 1px 1px 0px rgb(58,23,63);
 }
 
@@ -35,24 +35,18 @@ body.landing { /*edits "landing" class*/
      position: relative;
      padding: 2rem;
      text-align: center;
-     opacity: 0;
+     opacity: 1;
      -webkit-transform: scaleX(0.9) translateY(3rem); /*browser specific*/
      -moz-transform: scaleX(0.9) translateY(3rem); /*browser specific*/
      transform: scaleX(0.9) translateY(3rem);
-     -webkit-transition: all 1s ease-in-out; /*transitition all .point elements in a quarter of a second with ease-in-out property*/
-     -moz-transition: all 1s ease-in-out;
-     transition: all 0.25s ease-in-out;
-     -webkit-transition-delay: 1s;
-     -moz-transition-delay: 1s;
-     transition-delay: 1s;
 }
 
 .point .point-title {
 	font-size: 1.25rem;
 }
 
-.ion-music-note, 
-.ion-radio-waves, 
+.ion-music-note,
+.ion-radio-waves,
 .ion-iphone {
      color: rgb(233,50,117);
      font-size: 5rem;
