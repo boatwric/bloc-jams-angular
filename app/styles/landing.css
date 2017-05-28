@@ -1,22 +1,21 @@
-body.landing { /*edits "landing" class*/
-	background-color: rgb(58,23,63);
+body.landing {
+    background-color: rgb(58,23,63);
 }
 
 .hero-content {
-     position: relative;
-     min-height: 600px;
-     background-image: url(../assets/images/bloc_jams_bg.jpg);
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-size: cover;
+    position: relative;
+    min-height: 600px;
+    background-image: url(../assets/images/bloc_jams_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .hero-content .hero-title {
-	position: absolute;
-	top: 40%;
-	-webkit-transform: translateY(-50%); /*"The prefixes with names in dashes, like -webkit-, are known as vendor prefixes. Vendor prefixes are required for any CSS property that hasn't been officially adopted into the CSS3 specification. We're using the transform property and the translateY value to vertically center the text in the hero-content container. The three prefixes identify the transform property for the Webkit, Mozilla, and Microsoft-based browser, respectively."*/
-	-moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    position: absolute;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
@@ -28,27 +27,32 @@ body.landing { /*edits "landing" class*/
 }
 
 .selling-points {
-	position: relative;
+    position: relative;
 }
 
 .point {
-     position: relative;
-     padding: 2rem;
-     text-align: center;
-     opacity: 1;
-     -webkit-transform: scaleX(0.9) translateY(3rem); /*browser specific*/
-     -moz-transform: scaleX(0.9) translateY(3rem); /*browser specific*/
-     transform: scaleX(0.9) translateY(3rem);
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    opacity: 1;
+    -webkit-transform: scaleX(0.9) translateY(3rem);
+    -moz-transform: scaleX(0.9) translateY(3rem);
+    transform: scaleX(0.9) translateY(3rem);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 
 .point .point-title {
-	font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 .ion-music-note,
 .ion-radio-waves,
 .ion-iphone {
-     color: rgb(233,50,117);
-     font-size: 5rem;
- }
-/*These are the icons that were included in the second link tag of the html file. They import the icons, size them, and turn them a rad pink*/
+    color: rgb(233,50,117);
+    font-size: 5rem;
+}
