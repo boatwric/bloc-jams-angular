@@ -41,9 +41,10 @@
              for (var i = 0; i < numberOfAlbums; i++){
                  collection.push(albumPicasso);
               };
-
-        return Fixtures;
+          return collection;
      }
+
+     return Fixtures;
    }
 
      angular

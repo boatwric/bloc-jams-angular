@@ -5,5 +5,5 @@
 
      angular
          .module('blocJams')
-         .controller(['Fixtures', CollectionCtrl]);
+         .controller('CollectionCtrl',['Fixtures', CollectionCtrl]);
  })();
