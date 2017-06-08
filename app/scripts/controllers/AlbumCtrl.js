@@ -1,13 +1,13 @@
 (function() {
-     function AlbumCtrl() {
+     function AlbumCtrl(Fixtures) {
        this.albumData = {};
-       this.albumData= angular.copy(albumPicasso);
+       this.albumData= Fixtures.getAlbum();
         }
 
 
      angular
          .module('blocJams')
-         .controller('AlbumCtrl', AlbumCtrl);
+         .controller('AlbumCtrl', ['Fixtures', AlbumCtrl]);
  })();
 
 
@@ -18,8 +18,8 @@ Add an albumData property that holds a copy of albumPicasso. YUP
 Use ngRepeat on the album-view-song-item table row to add a song row for each song on the album. YUP
 Replace the static song information with the song data using the corresponding scope properties and {{ }} markup:
 number (Refer to the table of "exposed properties" in the ngRepeat documentation)
-name
-length (You'll filter the time code in a later checkpoint)
+name YUP
+length (You'll filter the time code in a later checkpoint) YUP
 In the Album template, replace the static album information with the album data using {{ }} markup:
 album art YUP
 name YUP
