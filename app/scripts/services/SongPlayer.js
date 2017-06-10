@@ -1,9 +1,37 @@
 (function() {
           function SongPlayer() {
+
+            /**
+            *@desc Empty object you throw all your crap into
+            *@param {Object}
+            */
+
               var SongPlayer = {};
 
+              /**
+              *@desc Currently song
+              *@param {Object}
+              */
+
               var currentSong = null;
+
+              /**
+              *@desc Audio file
+              *@param {Object}
+              */
+
               var currentBuzzObject = null;
+
+              /**
+              *@function playSong
+              *@desc Plays currentBuzzObject, sets true to song.playing method
+              *@param {Object} song
+              */
+
+              var playSong = function(song) {
+                  currentBuzzObject.play();
+                  song.playing = true;
+              };
 
               /**
               * @function setSong
@@ -28,14 +56,24 @@
                   currentSong = song;
                };
 
+               /**
+               * @function
+               * @desc Plays a song
+               * @type {Object}
+               */
+
               SongPlayer.play = function(song) {
                   if (currentSong !== song) {
                     setSong(song);
-                    currentBuzzObject.play();
-                    song.playing = true;
+                    playSong(song);
           }
         };
 
+        /**
+        * @function
+        * @desc Pauses the song
+        * @type {Object}
+        */
               SongPlayer.pause = function(song) {
                 currentBuzzObject.pause();
                 song.playing = false;
