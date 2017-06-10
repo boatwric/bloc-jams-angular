@@ -41,8 +41,7 @@
 
               var setSong = function(song) {
                   if (currentBuzzObject) {
-                      currentBuzzObject.stop();
-                      SongPlayer.currentSong.playing = null;
+                      stopSong();
                   }
 
                   /**
@@ -66,6 +65,19 @@
                var getSongIndex = function(song) {
                    return currentAlbum.songs.indexOf(song);
                };
+
+               /**
+               * @function stopSong
+               * @desc Stops song, sets playing property to null
+               * @param {Object} song
+               */
+
+               var stopSong = function() {
+                  currentBuzzObject.stop();
+                  SongPlayer.currentSong.playing = null;
+                };
+
+
 
                /**
                *@desc Active song from list
@@ -112,15 +124,35 @@
               SongPlayer.previous = function() {
                   var currentSongIndex = getSongIndex(SongPlayer.currentSong);
                   currentSongIndex--;
+
                   if (currentSongIndex < 0) {
-                     currentBuzzObject.stop();
-                     SongPlayer.currentSong.playing = null;
+                    stopSong();
                   } else {
                       var song = currentAlbum.songs[currentSongIndex];
                       setSong(song);
                       playSong(song);
                    }
               };
+
+              /**
+              * @function next
+              * @desc Goes to index + 1
+              * @type {Object}
+              */
+
+              SongPlayer.next = function() {
+                   var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+                   currentSongIndex++;
+
+                  if (currentSongIndex > currentAlbum.songs.length - 1) {
+                       currentBuzzObject.stop();
+                       SongPlayer.currentSong.playing = null;
+                  } else {
+                        var song = currentAlbum.songs[currentSongIndex];
+                        setSong(song);
+                        playSong(song);
+                  }
+             };
 
           return SongPlayer;
       }
