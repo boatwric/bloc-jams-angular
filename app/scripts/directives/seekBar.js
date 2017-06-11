@@ -53,7 +53,11 @@
 
             scope.fillStyle = function() {
                 return {width: percentString()};
-          };
+             };
+
+            scope.thumbStyle = function() {
+                //return {percentString()};
+             };
 
 
           /**COMMENT
@@ -77,9 +81,9 @@
 
               $document.bind('mousemove.thumb', function(event) {
                   var percent = calculatePercent(seekBar, event);
-                  scope.$apply(function() {
+                  //scope.$apply(function() {
                       scope.value = percent * scope.max;
-                  });
+                  //});
               });
 
               $document.bind('mouseup.thumb', function() {
