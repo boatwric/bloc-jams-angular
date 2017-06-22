@@ -1,29 +1,29 @@
 (function() {
   function seekBar($document) {
 
-      /**COMMENT
-      * @function calculatePercent
-      * @desc CCalculates the horizontal percent along the seek bar where the event (passed in from the view as  $event) occurred
-      * @param {Object} seekBar,event
-      */
+    /**COMMENT
+    * @function calculatePercent
+    * @desc CCalculates the horizontal percent along the seek bar where the event (passed in from the view as  $event) occurred
+    * @param {Object} seekBar,event
+    */
 
-      var calculatePercent = function(seekBar, event) {
-          var offsetX = event.pageX - seekBar.offset().left;
-          var seekBarWidth = seekBar.width();
-          var offsetXPercent = offsetX / seekBarWidth;
-          offsetXPercent = Math.max(0, offsetXPercent);
-          offsetXPercent = Math.min(1, offsetXPercent);
-          return offsetXPercent;
-      };
+    var calculatePercent = function(seekBar, event) {
+      var offsetX = event.pageX - seekBar.offset().left;
+      var seekBarWidth = seekBar.width();
+      var offsetXPercent = offsetX / seekBarWidth;
+      offsetXPercent = Math.max(0, offsetXPercent);
+      offsetXPercent = Math.min(1, offsetXPercent);
+      return offsetXPercent;
+    };
 
-      return {
-          templateUrl: '/templates/directives/seek_bar.html',
-          replace: true,
-          restrict: 'E',
-          scope: { },
-          link: function(scope, element, attributes) { /*Directive link functions take the same arguments (with a strict order) during declaration. Altering the order of these arguments will cause errors.*/
-            scope.value = 0;
-            scope.max = 100;
+    return {
+      templateUrl: '/templates/directives/seek_bar.html',
+      replace: true,
+      restrict: 'E',
+      scope: { },
+      link: function(scope, element, attributes) { /*Directive link functions take the same arguments (with a strict order) during declaration. Altering the order of these arguments will cause errors.*/
+        scope.value = 0;
+        scope.max = 100;
 
             /**COMMENT
             *@desc Holds the element that matches the directive (<seek-bar>) as a jQuery object so we can call jQuery methods on it
@@ -56,7 +56,9 @@
              };
 
             scope.thumbStyle = function() {
-                //return {percentString()};
+                //return {
+  percentString()
+//};
              };
 
 
@@ -92,11 +94,11 @@
               });
           };
 
-        }
-      };
     }
+  };
+}
 
-    angular
-        .module('blocJams')
-        .directive('seekBar', ['$document', seekBar]);
+angular
+  .module('blocJams')
+  .directive('seekBar', ['$document', seekBar]);
 })();

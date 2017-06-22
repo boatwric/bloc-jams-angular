@@ -1,57 +1,58 @@
 (function() {
-          function SongPlayer(Fixtures) {
+  function SongPlayer(Fixtures) {
 
-              /**
-              *@desc Empty object you throw all your crap into
-              *@param {Object}
-              */
+    /**
+    *@desc Empty object you throw all your crap into
+    *@param {Object}
+    */
 
-              var SongPlayer = {};
+    var SongPlayer = {};
 
-              /**
-              *@desc Album object
-              *@param {Object}
-              */
+    /**
+    *@desc Album object
+    *@param {Object}
+    */
 
-              var currentAlbum = Fixtures.getAlbum();
+    var currentAlbum = Fixtures.getAlbum();
 
-              /**
-              *@desc Audio file
-              *@param {Object}
-              */
+    /**
+    *@desc Audio file
+    *@param {Object}
+    */
 
-              var currentBuzzObject = null;
+    var currentBuzzObject = null;
 
-              /**
-              *@function playSong
-              *@desc Plays currentBuzzObject, sets true to song.playing method
-              *@param {Object} song
-              */
+    /**
+    *@function playSong
+    *@desc Plays currentBuzzObject, sets true to song.playing method
+    *@param {Object} song
+    */
 
-              var playSong = function(song) {
-                  currentBuzzObject.play();
-                  song.playing = true;
-              };
+    var playSong = function(song) {
+      currentBuzzObject.play();
+      song.playing = true;
+    };
 
-              /**
-              * @function setSong
-              * @desc Stops currently playing song and loads new audio file as currentBuzzObject
-              * @param {Object} song
-              */
+    /**
+    * @function setSong
+    * @desc Stops currently playing song and loads new audio file as currentBuzzObject
+    * @param {Object} song
+    */
 
-              var setSong = function(song) {
-                  if (currentBuzzObject) {
-                      stopSong();
-                  }
+    var setSong = function(song) {
+      if (currentBuzzObject) {
+        stopSong();
+    }
 
-                  /**
-                  * @desc Buzz object audio file
-                  * @type {Object}
-                  */
-                  currentBuzzObject = new buzz.sound(song.audioUrl, {
-                      formats: ['mp3'],
-                      preload: true
-                  });
+    /**
+    * @desc Buzz object audio file
+    * @type {Object}
+    */
+
+    currentBuzzObject = new buzz.sound(song.audioUrl, {
+      formats: ['mp3'],
+      preload: true
+    });
 
                   SongPlayer.currentSong = song;
                };
@@ -157,7 +158,9 @@
           return SongPlayer;
       }
 
-     angular
-         .module('blocJams')
-         .factory('SongPlayer', ['Fixtures', SongPlayer]);
+angular
+
+  .module('blocJams')
+  .factory('SongPlayer', ['Fixtures', SongPlayer]);
+
  })();
