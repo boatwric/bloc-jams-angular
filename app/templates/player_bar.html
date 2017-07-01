@@ -48,7 +48,7 @@
 
         <!--DEES DA TIMEZ!-->
 
-        <div class="current-time"></div>
+        <div class="current-time" value="{{ playerBar.songPlayer.currentTime }}"></div>
         <div class="total-time">{{playerBar.albumData.duration}}</div>
 
       </div>
@@ -59,7 +59,7 @@
 
     <div class="control-group volume">
       <span class="icon ion-volume-high"></span>
-      <seek-bar></seek-bar>
+      <seek-bar value= "{{ playerBar.SongPlayer.volume }}" max="100" on-change="playerBar.songPlayer.setVolume(value)"></seek-bar>
     </div>
 
   </div>
