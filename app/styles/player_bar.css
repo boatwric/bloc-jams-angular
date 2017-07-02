@@ -172,25 +172,25 @@
 /*START mobile rendering*/
 
 @media (max-width: 640px) {
- .player-bar {
-     padding: 1rem;
-     background-color: rgba(0,0,0,0.6); /*transluscent black lets white text stand out better*/
- }
+  .player-bar {
+   padding: 1rem;
+   background-color: rgba(0,0,0,0.6); /*transluscent black lets white text stand out better*/
+  }
 
- .player-bar .main-controls,
- .player-bar .currently-playing,
- .player-bar .volume {
-     display: block; /*stacks elements vertically*/
-     margin: 0 auto;
-     padding: 0;
-     width: 100%; /*makes controls fill up width of screen*/
-     text-align: center;
- }
+.player-bar .main-controls,
+.player-bar .currently-playing,
+.player-bar .volume {
+ display: block; /*stacks elements vertically*/
+ margin: 0 auto;
+ padding: 0;
+ width: 100%; /*makes controls fill up width of screen*/
+ text-align: center;
+}
 
- .player-bar .main-controls,
- .player-bar .volume {
-     min-height: 3.5rem; /*all controls get a minimum height to display well*/
- }
+.player-bar .main-controls,
+.player-bar .volume {
+ min-height: 3.5rem; /*all controls get a minimum height to display well*/
+}
 
 .player-bar .currently-playing {
   min-height: 2.5rem;
@@ -203,6 +203,7 @@
 
 .player-bar .currently-playing .artist-song-mobile {
   display: block;
+}
 }
 
 /*END mobile rendering*/
